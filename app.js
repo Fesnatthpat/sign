@@ -1,23 +1,27 @@
 function calculateScore() {
-    const answers = {
-      q1: "a", // Correct answer for question 1
-      q2: "a", // Correct answer for question 2
-      // Add the correct answers for all questions
-    };
+  const answers = {
+    q1: "a",
+    q2: "b",
+    q3: "c",
+    q4: "a",
+    q5: "c",
+    q6: "b",
+    q7: "c",
+    q8: "a",
+    q9: "b",
+    q10: "a",
+  };
 
-    let score = 0;
+  let score = 0;
+  const totalQuestions = 10;
 
-    // Loop through each question and compare user answers with correct answers
-    for (let i = 1; i <= 2; i++) {
-      const userAnswer = document.querySelector(
-        `input[name="q${i}"]:checked`
-      );
-      if (userAnswer && userAnswer.value === answers[`q${i}`]) {
-        score++;
-      }
+  for (let i = 1; i <= totalQuestions; i++) {
+    const userAnswer = document.querySelector(`input[name="q${i}"]:checked`);
+    if (userAnswer && userAnswer.value === answers[`q${i}`]) {
+      score++;
     }
-
-    // Show the result
-    const resultDiv = document.getElementById("result");
-    resultDiv.innerHTML = `<h3>Your Score: ${score} / 2</h3>`;
   }
+
+  const resultDiv = document.getElementById("result");
+  resultDiv.innerHTML = `<h3>คะแนนของคุณ: ${score} / ${totalQuestions}</h3>`;
+}
