@@ -8,3 +8,9 @@ body {
   .question {
     margin-bottom: 20px;
   }
+
+  img {
+    width: 50%;
+    /* height: 500px; */
+    object-fit: cover;
+  }
