@@ -1,3 +1,6 @@
+* {
+  color: aliceblue;
+}
 body {
   background-image: url("circle-scatter-haikei.svg");
   background-position: center;
